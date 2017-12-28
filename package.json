@@ -1,12 +1,12 @@
 {
-  "name": "weather-app",
+  "name": "node_weatherapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Javier",
   "license": "ISC",
   "dependencies": {
     "request": "^2.73.0"
