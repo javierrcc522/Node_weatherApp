@@ -1,8 +1,13 @@
-var somePromise = new Promise((resolve, reject)=>{
-  resolve("It's working ;p");
+var somePromise = new Promise(function(resolve, reject){
+  setTimeout(()=>{
+    resolve("It's working ;p");
+  }, 2500);
 });
 
 
-somePromise.then((message)=>{
-  console.log('Success:', message );
+somePromise.then(
+  (resolve)=>{
+  console.log('Success:', resolve);
+},function(reject){
+  console.log('Not bueno', reject);
 });
