@@ -6,13 +6,16 @@ var asyncAdd = (a, b) => {
       } else {
         reject('Arguments must be numbers');
       }
-    }, 2500);
+    }, 100);
   });
 };
 
 asyncAdd(9, 19).then(function(works){
   console.log('Result', works);
-}, function(noWork){
+  return asyncAdd(works, 33);
+}).then(function(works){
+  console.log('Should be', works);
+}).catch(function(noWork){
   console.log(noWork);
 });
 
